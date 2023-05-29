@@ -1,0 +1,39 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+}
+.wrapper {
+    max-width: 1000px;
+    margin: 100px auto;
+}
+.accodion-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+.accodion-item-trigger {
+    display: block;
+    padding: 20px;
+    border: 1px solid #000;
+}
+.accodion-item-content {
+    padding: 20px;
+    border: 1px solid #000;
+    border-top: 0;
+    display: none;
+}
+.accodion-item-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.accodion-item-input:checked ~ .accodion-item-trigger {
+    color: #FF0000;
+}
+.accodion-item-input:checked ~ .accodion-item-content {
+    display: block;
+}
